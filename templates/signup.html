@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Reader - SignUp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .container h1 {
+            color: #333;
+        }
+        .container img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://via.placeholder.com/100" alt="Logo"> -->
+        <h1 style="color: #4CAF50;">SignUp</h1>
+        <form method="post" action='/'>
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="email" name="email" placeholder="Enter email" required>
+            <input type="password" name="password" placeholder="Enter password" required>
+            <button type="submit">Signup</button>
+        </form>
+
+        
+        <div style="margin-top: 10px; text-align: center;">
+            <a href="/login" style="color: #5c5c5c; font-size: 15px; text-decoration: none;">
+                Already have an account? 
+                <span style="color: #4CAF50; cursor: pointer;">Login here</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

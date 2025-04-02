@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #3b3b3b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .container p {
+            color: #555;
+        }
+        .container input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+        .container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f2f5;
+            border-radius: 5px;
+            text-align: left;
+            color: #333;
+        }
+    </style>
+   
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container">
+        <h1 style="color: #4CAF50;">Image to Text</h1>
+        <p style="font-size: 14px; color: #666;">Upload an image to extract text from it</p>
+        <form action="/home" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Convert to Text</button>
+        </form>
+        <div class="output">
+            <h3>Extracted Text:</h3>
+            <p>{{ extracted_text }}</p>
+        </div>
+    </div>
+</body>
+</html>
